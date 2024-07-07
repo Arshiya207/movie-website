@@ -1,0 +1,111 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*! reset codes*/
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#A67B5B;
+    --secondery-color:#FED8B1;
+   
+
+}
+body{
+    background-color: blue;
+}
+ul{
+    list-style: none;
+  
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.highlight{
+    color: var(--primary-color) ;
+}
+/*! reset codes*/
+/* ! header of header style */
+.header-of-header{
+    font-family: "Roboto", sans-serif;
+
+}
+.brand-image-c{
+    
+    height: 50px;
+    margin-right: 1rem;
+
+}
+.brand-image{
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: .5rem;
+}
+
+.brand-image-c>a{
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: center;
+    
+
+    
+}
+.brand-text{
+    font-size: 2rem;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    padding: 1rem 3rem;
+
+}
+.nav-item{
+    padding: 0 .5rem;
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.nav-seperator{
+    margin-left: auto;
+}
+.my-account{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    background-color: transparent;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-search>i{
+    font-size: 1rem;
+    margin-right: .3rem;
+}
+.my-list > i{
+    font-size: 1rem;
+    margin-right: .3rem;
+}
+.nav-item   {
+    font-size: 1.1rem;
+    text-transform: capitalize  ;
+}
+.page-header{
+    height: 100vh;
+
+}
+.main-page-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+/* ! header of header style */
