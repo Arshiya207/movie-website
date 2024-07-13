@@ -1,43 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="arshiya">
-    <meta name="description" content="movie app ">
-    <meta name="keywords" content="movie, film, cartoon">
-    <meta name="robots" content="index/follow">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="arshiya" />
+    <meta name="description" content="movie app " />
+    <meta name="keywords" content="movie, film, cartoon" />
+    <meta name="robots" content="index/follow" />
     <title>Coffee film</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-    <link rel="icon" type="image/x-icon" href="images/coffee-cup.png">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="images/coffee-cup.png" />
+  </head>
+  <body>
     <header class="page-header">
-        <header class="header-of-header">
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="brand-image-c">  
-                        <a href="#"><img src="images/coffee-cup.png" alt="brand" class="brand-image"> <span class="brand-text">Coffee<span class="highlight">FILM</span></span></a></li>
-                    <li class="nav-item"><a href="#">film</a></li>
-                    <li class="nav-item"><a href="#">TV series</a></li>
-                    <li class="nav-item ">  <a href="#" class="nav-search"><i class="bi bi-search"></i>search</a></li>
-                    <li class="nav-item nav-seperator"><a href="#" class="my-list"><i class="bi bi-archive-fill"></i>My List</a></li>
-                    <li class="nav-item my-account"><a href="#">a</a></li>
-               
+      <header class="header-of-header">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="brand-image-c">
+              <a href="#"
+                ><img
+                  src="images/coffee-cup.png"
+                  alt="brand"
+                  class="brand-image"
+                />
+                <span class="brand-text"
+                  >Coffee<span class="highlight">FILM</span></span
+                ></a
+              >
+            </li>
+            <li class="nav-item dropdown" data-dropdown>
+              <a href="#" class="dropdown-btn" data-dropdown-btn>film</a>
+              <div class="dropdown-menu" data-dropdown-menu>
+                <ul class="dropdown-menu-content" data-menu-film></ul>
+                <div class="dropdown-menu-pointer"></div>
+              </div>
+            </li>
+            <!-- <li class="nav-item dropdown" data-dropdown>
+              <a href="#" class="dropdown-btn" data-dropdown-btn>TV series</a>
+              <div  class="dropdown-menu" data-dropdown-menu>
+                <ul class="dropdown-menu-content">
+                  <li>drama</li>
+                  <li>action</li>
+                  <li>comedy</li>
                 </ul>
-    
-            </nav>
-        </header>
-   
-            <img class="main-page-img" src="images/john-wick.jpg" alt="background image">
+                <div class="dropdown-menu-pointer"></div>
+              </div>
+             
+            </li> -->
+            <li class="nav-item">
+              <a href="#" class="nav-search" data-search-btn
+                ><i class="bi bi-search"></i>search</a
+              >
+            </li>
+            <li class="nav-item nav-seperator dropdown" data-dropdown>
+              <a href="#" class="my-list dropdown-btn" data-dropdown-btn
+                ><i class="bi bi-archive-fill"></i>My List</a
+              >
+              <div
+                class="dropdown-menu watch-later-dropdown"
+                data-dropdown-menu
+              >
+                <div class="watch-later-container">
+                  <h4 class="watch-later-title">
+                    watch later<i class="bi bi-save-fill"></i>
+                  </h4>
+                  <ul class="watch-later-list">
+                    <li class="card-type-one">
+                      <div class="type-one-right">
+                        <a href="#">
+                          <img src="images/john-wick.jpg" alt="card-img" />
+                        </a>
+                      </div>
+                      <div class="type-one-left">
+                        <h2 class="type-one-title">john wick</h2>
+                        <p class="type-one-subtitle">1 hour</p>
+                        <a href="#" class="type-one-btn"
+                          >Watch<i class="bi bi-play-fill"></i
+                        ></a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item my-account"><a href="#">a</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <img
+        class="main-page-img"
+        src="images/spider-man-no-way-home-review_2njb.1200.webpF"
+        alt="background image"
+      />
+      <div class="slider-action">
+        <div class="slider-button-group">
+          <button class="slider-glass-btn">
+            <i class="bi bi-forward-fill"></i>
+          </button>
+          <button class="slider-glass-btn">
+            <i class="bi bi-forward-fill"></i>
+          </button>
+        </div>
+        <div class="slider-content-group">
+          <p>Lorem ipsum dolor, sit amet</p>
+          <button class="slider-normal-btn">
+            click to watch<i class="bi bi-play-fill"></i>
+          </button>
+        </div>
+      </div>
+      <div class="search-container" data-search-box>
+        <form action="#" class="search-form" data-search-form>
+          <label for="search" class="search-label"
+            >search your desired movie</label
+          >
+          <div class="input-group">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              class="search-input"
+              placeholder="search..."
+            />
+            <a href="#" class="input-group-btn"><i class="bi bi-search"></i></a>
+          </div>
+        </form>
+        <button class="search-button-dismiss" type="button">
+          <i class="bi bi-x-square-fill"></i>
+        </button>
+      </div>
     </header>
-   
-
-
-
-
+    <main class="main">
+      <div class="card-section">
+        <h2 class="card-section-title">drama</h2>
+        <div class="cards-container">
+          <div class="card-type-two">
+            <div class="type-two-poster-container">
+              <a href="#" class="poster">
+                <img
+                  src="images/dragon.webp"
+                  alt="poster"
+                  class="type-two-img"
+                />
+                <div class="type-two-info-overlay">
+                  <span>drama</span>
+                  <span>2024-usa</span>
+                </div>
+              </a>
+            </div>
+            <div class="type-two-title">
+              <h3>john wick</h3>
+            </div>
+          </div>
+          <div class="card-type-two">
+            <div class="type-two-poster-container">
+              <a href="#" class="poster">
+                <img
+                  src="images/dragon.webp"
+                  alt="poster"
+                  class="type-two-img"
+                />
+                <div class="type-two-info-overlay">
+                  <span>drama</span>
+                  <span>2024-usa</span>
+                </div>
+              </a>
+            </div>
+            <div class="type-two-title">
+              <h3>john wick</h3>
+            </div>
+          </div>
+          <div class="card-type-two">
+            <div class="type-two-poster-container">
+              <a href="#" class="poster">
+                <img
+                  src="images/dragon.webp"
+                  alt="poster"
+                  class="type-two-img"
+                />
+                <div class="type-two-info-overlay">
+                  <span>drama</span>
+                  <span>2024-usa</span>
+                </div>
+              </a>
+            </div>
+            <div class="type-two-title">
+              <h3>john wick</h3>
+            </div>
+          </div>
+          <div class="card-type-two">
+            <div class="type-two-poster-container">
+              <a href="#" class="poster">
+                <img
+                  src="images/dragon.webp"
+                  alt="poster"
+                  class="type-two-img"
+                />
+                <div class="type-two-info-overlay">
+                  <span>drama</span>
+                  <span>2024-usa</span>
+                </div>
+              </a>
+            </div>
+            <div class="type-two-title">
+              <h3>john wick</h3>
+            </div>
+          </div>
+          <div class="card-type-two">
+            <div class="type-two-poster-container">
+              <a href="#" class="poster">
+                <img
+                  src="images/dragon.webp"
+                  alt="poster"
+                  class="type-two-img"
+                />
+                <div class="type-two-info-overlay">
+                  <span>drama</span>
+                  <span>2024-usa</span>
+                </div>
+              </a>
+            </div>
+            <div class="type-two-title">
+              <h3>john wick</h3>
+            </div>
+          </div>
+          <div class="card-type-two">
+            <div class="type-two-poster-container">
+              <a href="#" class="poster">
+                <img
+                  src="images/dragon.webp"
+                  alt="poster"
+                  class="type-two-img"
+                />
+                <div class="type-two-info-overlay">
+                  <span>drama</span>
+                  <span>2024-usa</span>
+                </div>
+              </a>
+            </div>
+            <div class="type-two-title">
+              <h3>john wick</h3>
+            </div>
+          </div>
+          <div class="card-type-two">
+            <div class="type-two-poster-container">
+              <a href="#" class="poster">
+                <img
+                  src="images/dragon.webp"
+                  alt="poster"
+                  class="type-two-img"
+                />
+                <div class="type-two-info-overlay">
+                  <span>drama</span>
+                  <span>2024-usa</span>
+                </div>
+              </a>
+            </div>
+            <div class="type-two-title">
+              <h3>john wick</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
