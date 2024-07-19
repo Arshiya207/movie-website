@@ -2,12 +2,18 @@
 @import "navbarStyle.css";
 @import "variable.css";
 @import "reset.css";
+
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
-
+.page-header {
+  background-color: rgba(0, 0, 0, 0.416);
+}
+.page-header.loading {
+  background-color: var(--pale-brown-color);
+}
 .movie-info-container {
   display: flex;
   flex-direction: column;
@@ -64,28 +70,23 @@ body {
   font-size: 1rem;
   margin-right: 0.5rem;
 }
+
 .main {
-    background-image: url(../images/adrien-olichon-ilVYjf0J378-unsplash.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  border-top: 2px solid var(--primary-font-color);
+  background-color: var(--pale-brown-color);
 }
 .movie-additional-info-container {
-   
-
-  backdrop-filter: blur(100px);
+  backdrop-filter: blur(5px);
   padding: 2rem 4rem;
   display: flex;
- 
-  
-  
 }
-.movie-plot {
-  margin-bottom: 1rem;
+
+.movie-actores,
+.movie-plot,
+.movie-writers {
+  flex: 1;
 }
-.movie-actores {
-  margin-bottom: 1rem;
-}
+
 .movie-plot > p,
 .movie-actores > p,
 .movie-writers > p {
@@ -98,3 +99,36 @@ body {
 .movie-writers > h3 {
   font-size: 1.3rem;
 }
+/*  loading animation */
+.loader-container {
+  height: 100px;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 15px solid var(--secondery-color);
+  border-top: 15px solid var(--primary-color);
+  animation-name: loader;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes loader {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: 1s linear opacity, 1s linear visibility;
+}
+/* end  loading animation */

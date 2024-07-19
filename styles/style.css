@@ -1,5 +1,5 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import "navbarStyle.css";
 @import "variable.css";
 
@@ -11,7 +11,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 
 body {
   color: var(--primary-font-color);
@@ -39,7 +38,6 @@ a {
 /* ! header style */
 .page-header {
   height: 100vh;
-  
 }
 
 .main-page-img {
@@ -115,7 +113,6 @@ a {
   margin-left: 0.5rem;
 }
 
-
 /* ! header style */
 /* card type one styling */
 /* card type one styling */
@@ -140,10 +137,9 @@ a {
   flex: 1;
 }
 .type-two-poster-container {
-width: 100%;
+  width: 100%;
   overflow: hidden;
   border-radius: 5px;
-
 }
 .poster {
   width: 100%;
@@ -182,38 +178,41 @@ width: 100%;
 }
 .cards-container {
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
   grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
   grid-auto-rows: auto;
-
 }
 /* end card type two styling */
 /*  loading animation */
-.loader-container{
+.loader-container {
   height: 100px;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.loader{
+.loader {
   width: 75px;
   height: 75px;
   border-radius: 50%;
   border: 15px solid var(--secondery-color);
   border-top: 15px solid var(--primary-color);
-  animation-name: loader ;
+  animation-name: loader;
   animation-duration: 1s;
-  animation-timing-function:ease-in-out;
+  animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 @keyframes loader {
-  from{transform: rotate(0turn);}
-  to{transform: rotate(1turn);}
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
-.loader--hidden{
+.loader--hidden {
   opacity: 0;
   visibility: hidden;
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
 /* end  loading animation */
