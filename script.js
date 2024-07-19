@@ -93,6 +93,7 @@ async function genreMovies(genreIndex) {
 
  generateCategory(3)
 
+
 // events
 
 document.addEventListener("click", (e) => {

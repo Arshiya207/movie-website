@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  color: var(--primary-font-color);
+}
+
+ul {
+  list-style: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.highlight {
+  color: var(--primary-color);
+}
+.tex-icon {
+  display: flex;
+  align-items: center;
+}

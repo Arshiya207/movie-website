@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="arshiya" />
-    <meta name="description" content="movie app " />
-    <meta name="keywords" content="movie, film, cartoon" />
     <meta name="robots" content="index/follow" />
-    <title>Coffee film</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <meta name="keywords" content="film, movies" />
+    <meta name="description" content="website to get details of movies" />
+    <link rel="stylesheet" href="styles/movieStyle.css" />
+    <link rel="icon" type="image/x-icon" href="images/coffee-cup.png" />
     <link
       rel="stylesheet"
       href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
     />
-    <link rel="icon" type="image/x-icon" href="images/coffee-cup.png" />
+    <title>Coffe Film M</title>
   </head>
   <body>
     <header class="page-header">
@@ -40,17 +40,17 @@
               </div>
             </li>
             <!-- <li class="nav-item dropdown" data-dropdown>
-              <a href="#" class="dropdown-btn" data-dropdown-btn>TV series</a>
-              <div  class="dropdown-menu" data-dropdown-menu>
-                <ul class="dropdown-menu-content">
-                  <li>drama</li>
-                  <li>action</li>
-                  <li>comedy</li>
-                </ul>
-                <div class="dropdown-menu-pointer"></div>
-              </div>
-             
-            </li> -->
+            <a href="#" class="dropdown-btn" data-dropdown-btn>TV series</a>
+            <div  class="dropdown-menu" data-dropdown-menu>
+              <ul class="dropdown-menu-content">
+                <li>drama</li>
+                <li>action</li>
+                <li>comedy</li>
+              </ul>
+              <div class="dropdown-menu-pointer"></div>
+            </div>
+           
+          </li> -->
             <li class="nav-item">
               <a href="#" class="nav-search" data-search-btn
                 ><i class="bi bi-search"></i>search</a
@@ -91,28 +91,6 @@
           </ul>
         </nav>
       </header>
-
-      <img
-        class="main-page-img"
-        src="images/coffee-beans-7126154.jpg"
-        alt="background image"
-      />
-      <div class="slider-action">
-        <div class="slider-button-group">
-          <button class="slider-glass-btn">
-            <i class="bi bi-forward-fill"></i>
-          </button>
-          <button class="slider-glass-btn">
-            <i class="bi bi-forward-fill"></i>
-          </button>
-        </div>
-        <div class="slider-content-group">
-          <p>Lorem ipsum dolor, sit amet</p>
-          <button class="slider-normal-btn">
-            click to watch<i class="bi bi-play-fill"></i>
-          </button>
-        </div>
-      </div>
       <div class="search-container" data-search-box>
         <form action="#" class="search-form" data-search-form>
           <label for="search" class="search-label"
@@ -133,36 +111,47 @@
           <i class="bi bi-x-square-fill"></i>
         </button>
       </div>
-    </header>
-    <main class="main">
-      <!-- <div class="loader-container">
-          <div class="loader"></div>
-      </div> -->
-      <!-- <div class="card-section">
-        <h2 class="card-section-title">??</h2>
-        <div class="cards-container">
-          <div class="card-type-two">
-            <div class="type-two-poster-container">
-              <a href="#" class="poster">
-                <img
-                  src="images/dragon.webp"
-                  alt="poster"
-                  class="type-two-img"
-                />
-                <div class="type-two-info-overlay">
-                  <span>drama</span>
-                  <span>2024-usa</span>
-                </div>
-              </a>
-            </div>
-            <div class="type-two-title">
-              <h3>john wick</h3>
-            </div>
+      <img
+        src="http://moviesapi.ir/images/tt0111161_screenshot1.jpg"
+        alt="main page image"
+        class="main-page-img"
+      />
+      <div class="movie-info-container">
+        <div class="movie-info-wrapper">
+          <div class="movie-info-poster">
+            <img
+              src="https://moviesapi.ir/images/tt0111161_poster.jpg"
+              alt="poster"
+              class="movie-info-poster-img"
+            />
+          </div>
+          <div class="movie-info">
+            <h1 class="movie-info-title">The Shawshank Redemption</h1>
+            <p class="movie-info-imdb">IMDB 9.3/10</p>
+            <p class="movie-info-director">Frank Darabont</p>
+            <p class="movie-info-year">1994</p>
+            <button class="movie-info-watch-later tex-icon"><i class="bi bi-floppy"></i> add to your list</button>
           </div>
         </div>
-      </div> -->
-    </main>
+      </div>
+    </header>
+    <div class="main">
+        <div class="movie-additional-info-container">
+              <div class="movie-plot">
+                    <h3>plot</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, voluptas!</p>
+              </div>
+              <div class="movie-actores">
+                <h3>actores</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, quas?</p>
+              </div>
+              <div class="movie-writers">
+                <h3>writers</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, .</p>
+              </div>
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+    <script src="scripts/movieScript.js"></script>
   </body>
 </html>

@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "navbarStyle.css";
+@import "variable.css";
+@import "reset.css";
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.movie-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80%;
+  padding: 0 6rem;
+}
+.movie-info-wrapper {
+  height: 60%;
+  transform: translateY(-10%);
+  display: flex;
+}
+.movie-info-poster {
+  overflow: hidden;
+  border-radius: 5px;
+}
+.movie-info-poster-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.movie-info {
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.movie-info > * {
+  backdrop-filter: blur(20px);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+.movie-info-imdb {
+  background-color: var(--imdb-bg);
+}
+.movie-info-title {
+  font-size: 3rem;
+}
+.movie-info-director {
+  font-size: 1rem;
+}
+.movie-info-year {
+  font-size: 1rem;
+}
+.movie-info-watch-later {
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  color: var(--primary-font-color);
+  cursor: pointer;
+  background: none;
+}
+.movie-info-watch-later > i {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+.main {
+    background-image: url(../images/adrien-olichon-ilVYjf0J378-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.movie-additional-info-container {
+   
+
+  backdrop-filter: blur(100px);
+  padding: 2rem 4rem;
+  display: flex;
+ 
+  
+  
+}
+.movie-plot {
+  margin-bottom: 1rem;
+}
+.movie-actores {
+  margin-bottom: 1rem;
+}
+.movie-plot > p,
+.movie-actores > p,
+.movie-writers > p {
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: 200;
+}
+.movie-plot > h3,
+.movie-actores > h3,
+.movie-writers > h3 {
+  font-size: 1.3rem;
+}
