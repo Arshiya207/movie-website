@@ -41,16 +41,12 @@ body {
   justify-content: space-around;
   align-items: flex-start;
 }
-.movie-info > * {
-  backdrop-filter: blur(20px);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-}
+
 .movie-info-imdb {
   background-color: var(--imdb-bg);
 }
 .movie-info-title {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 .movie-info-director {
   font-size: 1rem;
@@ -76,7 +72,6 @@ body {
   background-color: var(--pale-brown-color);
 }
 .movie-additional-info-container {
-  backdrop-filter: blur(5px);
   padding: 2rem 4rem;
   display: flex;
 }

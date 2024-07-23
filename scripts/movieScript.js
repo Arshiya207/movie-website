@@ -7,7 +7,7 @@ function movieAdditionalInfo(plot, actores, writers) {
                     <p>${plot}</p>
               </div>
               <div class="movie-actores">
-                <h3>actores</h3>
+                <h3>actors</h3>
                 <p>${actores}</p>
               </div>
               <div class="movie-writers">
@@ -132,14 +132,21 @@ document.addEventListener("click", (e) => {
     }
   }
 });
-searchToggleBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  searchBox.classList.toggle("active");
-  document.querySelectorAll("[data-dropdown]").forEach((dr) => {
-    dr.classList.remove("active");
-  });
+document.addEventListener("click", (e) => {
+  const targeted = e.target;
+  const isSearchBtn = targeted.matches("[data-search-btn]");
+  const isSearchDismissBtn = targeted.matches("[data-search-dismiss-btn]");
+  const searchBox = document.querySelector(".search-container");
+  if (isSearchBtn) {
+    searchBox.classList.toggle("active");
+    document.querySelectorAll("[data-dropdown]").forEach((dr) => {
+      dr.classList.remove("active");
+    });
+  }
+
+  if (isSearchDismissBtn) {
+    searchBox.classList.remove("active");
+  }
 });
-searchDismissBtn.addEventListener("click", () => {
-  searchBox.classList.remove("active");
-});
+
 //code block for dropdowns and search box

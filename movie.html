@@ -17,6 +17,26 @@
   </head>
   <body>
     <header class="page-header loading">
+      <div class="search-container" data-search-box>
+        <form action="search.html" method="get" class="search-form" data-search-form>
+          <label for="search" class="search-label"
+            >search your desired movie</label
+          >
+          <div class="input-group">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              class="search-input"
+              placeholder="search..."
+            />
+            <a href="#" class="input-group-btn"><i class="bi bi-search"></i></a>
+          </div>
+        </form>
+        <button class="search-button-dismiss" type="button" data-search-dismiss-btn>
+          <i class="bi bi-x-square-fill"></i>
+        </button>
+      </div>
       <header class="header-of-header">
         <nav class="nav">
           <ul class="nav-list">
@@ -79,26 +99,7 @@
           </ul>
         </nav>
       </header>
-      <div class="search-container" data-search-box>
-        <form action="#" class="search-form" data-search-form>
-          <label for="search" class="search-label"
-            >search your desired movie</label
-          >
-          <div class="input-group">
-            <input
-              type="text"
-              name="search"
-              id="search"
-              class="search-input"
-              placeholder="search..."
-            />
-            <a href="#" class="input-group-btn"><i class="bi bi-search"></i></a>
-          </div>
-        </form>
-        <button class="search-button-dismiss" type="button">
-          <i class="bi bi-x-square-fill"></i>
-        </button>
-      </div>
+     
       <div class="loader-container">
         <div class="loader"></div>
       </div>

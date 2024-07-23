@@ -4,7 +4,7 @@ function loaderComponent() {
           <div class="loader"></div>
       </div>`;
 }
-function cardTypeTwo(poster, genres, year, country, title, id) {
+ function cardTypeTwo(poster, genres, year, country, title, id) {
   return `
     
         <div class="card-type-two">
@@ -72,7 +72,7 @@ async function genreMovies(genreIndex) {
 
   let numberOfIteration = moviesArray.length >= 7 ? 7 : moviesArray.length;
   let containerPos = genreIndex;
-
+console.log(genreIndex)
   for (let i = 0; i < numberOfIteration; i++) {
     cardsContainers[containerPos].innerHTML += cardTypeTwo(
       moviesArray[i].poster,
@@ -89,9 +89,31 @@ async function generateCategory(end, start = 0) {
   for (let i = start; i < end; i++) {
     await genreMovies(i);
   }
+
+
 }
 
-generateCategory(3);
+async function lazyLoad(){
+  let startIndex=0
+  let endIndex=1
+  await generateCategory(endIndex,startIndex);
+  const lastCardObserver=new IntersectionObserver(async function(enteries){
+    if(endIndex==21) return
+      const entery=enteries[0]
+      if(!entery.isIntersecting) return
+      startIndex=endIndex
+      endIndex=endIndex+1
+      await generateCategory(endIndex,startIndex)
+      lastCardObserver.unobserve(entery.target)
+      lastCardObserver.observe(document.querySelector(".card-section:last-child"))
+
+  },{rootMargin:"500px"})
+
+  lastCardObserver.observe(document.querySelector(".card-section:last-child"))
+
+
+}
+lazyLoad()
 
 // events
 
@@ -123,13 +145,21 @@ document.addEventListener("click", (e) => {
     }
   }
 });
-searchToggleBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  searchBox.classList.toggle("active");
-  document.querySelectorAll("[data-dropdown]").forEach((dr) => {
-    dr.classList.remove("active");
-  });
+document.addEventListener("click", (e) => {
+  const targeted = e.target;
+  const isSearchBtn = targeted.matches("[data-search-btn]");
+  const isSearchDismissBtn = targeted.matches("[data-search-dismiss-btn]");
+  const searchBox = document.querySelector(".search-container");
+  if (isSearchBtn) {
+    searchBox.classList.toggle("active");
+    document.querySelectorAll("[data-dropdown]").forEach((dr) => {
+      dr.classList.remove("active");
+    });
+  }
+
+  if (isSearchDismissBtn) {
+    searchBox.classList.remove("active");
+  }
 });
-searchDismissBtn.addEventListener("click", () => {
-  searchBox.classList.remove("active");
-});
+// last card container observer
+

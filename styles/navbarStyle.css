@@ -138,6 +138,10 @@
   right: 1rem;
   cursor: pointer;
 }
+.search-button-dismiss>i{
+  user-select: none;
+  pointer-events: none;
+}
 .search-form {
   display: flex;
   flex-direction: column;
